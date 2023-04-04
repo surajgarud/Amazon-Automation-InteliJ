@@ -37,6 +37,16 @@ public class LoginPage extends TestBase {
         Thread.sleep(2000);
     }
 
+    public void multipleUserLogin(String un, String pw) throws InterruptedException {
+        sign.click();
+        email.sendKeys(un);
+        continuebtn.click();
+        Thread.sleep(2000);
+        pass.sendKeys(pw);
+        signbtn.click();
+        Thread.sleep(2000);
+    }
+
     public String geturl(){
 
         return driver.getCurrentUrl();
